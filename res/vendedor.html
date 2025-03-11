@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="vendedor.css">
+    <link rel="stylesheet" href="head-foot.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BS Vendedor</title>
+</head>
+<body>
+    <div class="contenedor">
+    	<div class="titulo">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <b>Binary Shop</b>
+	   </div>
+       <div class="menu">
+      	<button onclick="cerrarsesion(event)">Cerrar Sesión</button>
+        <button onclick="agregar()">Añadir Producto</button>
+        <button onclick="historial()">Historial de Ventas</button>
+       </div>
+     </div>
+
+    <h1 class="p">Productos</h1>
+    <div id="productos" class="productos"></div>
+
+    <div class="formulario" id="formulario">
+       <h2>Añadir producto</h2>
+       <form onsubmit="confirmar()">
+       <input type="text" placeholder="ingresa el nombre del producto" id="name" required>
+       <input type="text" placeholder="ingresa una descripcion del producto" id="descripcion" required>
+       <input type="text" placeholder="Ej: 10$" id="precio" required>
+       <label>Selecciona una imagen</label>
+       <input type="file" id="imagen" required>
+       <input type="submit" value="Confirmar">
+       <button onclick="cancelar()">Cancelar</button>
+       </form>
+     </div>
+
+     <div class="historial" id="historial">
+      <h2>Historial de Ventas</h2>
+      <p>Venta #1 <b>18/05/2024</b> 687$ Total</p>
+      <p>Venta #2 <b>30/07/2024</b> 5387$ Total</p>
+      <p>Venta #3 <b>23/08/2024</b> 942$ Total</p>
+      <p>Venta #4 <b>01/02/2025</b> 2516$ Total</p>
+      <button onclick="cerrarhistorial()">cerrar</button>
+     </div>
+
+    <div class="pie-de-pagina"><p>Copyright © Binary Shop 2025</p></div>
+
+    <script src="productos.js"></script>
+    <script src="vendedor.js"></script>
+</body>
+</html>

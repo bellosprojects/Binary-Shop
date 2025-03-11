@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="head-foot.css">
+    <link rel="stylesheet" href="cliente.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BS Cliente</title>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="titulo">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <b>Binary Shop</b>
+        </div>
+        <div class="botones"> 
+            <button onclick="vercarrito()" id="vercarrito">Ver Carrito</button>
+            <button onclick="finalizar()">Finalizar Compra</button>
+            <button onclick="home()">Cerrar Sesion</button> 
+        </div>
+    </div>
+    <h1 class="p">Productos</h1> 
+    <div id="productos" class="productos"></div>
+    <div id="carro" class="carro">
+        <h2 id="car-c">Carrito:</h2>
+        <div id="carrito" class="carrito"></div>
+    </div>
+       
+    <div class="formulario" id="formulario">
+        <h2>Esta seguro de la compra?</h2>
+        <button onclick="confirmar()">Confirmar</button>
+        <button onclick="cancelar()">Cancelar</button>
+    </div>
+    <div class="pie-de-pagina"><p>Copyright © Binary Shop 2025</p></div>
+    <script src="productos.js"></script>
+    <script src="cliente.js"></script>
+</body>
+</html>

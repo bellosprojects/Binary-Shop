@@ -1,0 +1,198 @@
+/*CSS*/
+.contenedor{
+    background:black;
+    color:white;
+    display:flex;                                             
+    justify-content:space-between;
+    position: fixed;
+    top:0;
+    width:100%;
+    z-index:1;
+    height: 55px;
+    align-items: center;
+  }
+  
+  .botones{
+    margin-right: 30px;
+  }
+  
+  .contenedor button{
+    border: none;
+    background: transparent;
+    color: white;
+    position: relative;
+    padding: 0;
+    height: fit-content;
+    font-size: medium;
+    margin-left: 30px;
+  }
+  
+  .contenedor button::after{
+    content: '';
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background: white;
+    left: 0;
+    transform: scale(0);
+    transition: all .3s;
+  }
+  
+  .contenedor button:hover::after{
+    transform: scale(1);
+  }
+  
+  .contenedor button:hover{
+    cursor: pointer;
+  }
+  
+  .titulo{
+    display:flex;
+    align-items:center;
+    font-family: Sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 2rem;
+    margin-left: 30px;
+    margin-top:3px;
+    position: relative;
+    width: fit-content;
+    padding: 5px 10px;
+    height:40px;
+    overflow:hidden;
+    transition: all .3s;
+  }
+  
+  .titulo:hover{
+    padding-left:25px;
+    padding-right:25px;
+    letter-spacing:5px;
+  }
+  
+  .titulo b{
+    color:transparent;
+    background:linear-gradient(to top, rgb(110,110,110), white, rgb(110,110,110));
+    background-clip:text;
+    animation: af 4s infinite ease-in;
+  }
+  
+  @keyframes af{
+    0%{
+      background-position: 0% 50px;
+    }
+    100%{
+      background-position: 0% -50px;
+    }
+  }
+  
+  .titulo span:nth-child(1){
+    position:absolute;
+    background:linear-gradient(to right, transparent, white);
+    width:100%;
+    height: 2px;
+    top:0;
+    left:0;
+    animation: a1 2s infinite linear;
+  }
+  
+  @keyframes a1{
+    0%{
+      transform: translateX(-100%);
+    }100%{
+      transform: translateX(100%);
+    }
+  }
+  
+  .titulo span:nth-child(2){
+    position:absolute;
+    background:linear-gradient(to bottom, transparent, white);
+    width:2px;
+    height: 100%;
+    top:0;
+    right:0;
+    animation: a2 2s infinite linear;
+  }
+  
+  @keyframes a2{
+    0%{
+      transform: translateY(0%);
+    }50%{
+      transform: translateY(100%);
+    }
+    50.01%{
+      transform: translateY(-100%);
+    }
+  }
+  
+  .titulo span:nth-child(3){
+    position:absolute;
+    background:linear-gradient(to left, transparent, white);
+    width:100%;
+    height: 2px;
+    bottom:0;
+    left:0;
+    animation: a3 2s infinite linear;
+  }
+  
+  @keyframes a3{
+    0%{
+      transform: translateX(100%);
+    }100%{
+      transform: translateX(-100%);
+    }
+  }
+  
+  .titulo span:nth-child(4){
+    position:absolute;
+    background:linear-gradient(to top, transparent, white);
+    width:2px;
+    height: 100%;
+    top:0;
+    left:0;
+    animation: a4 2s infinite linear;
+  }
+  
+  @keyframes a4{
+    0%{
+      transform: translateY(0%);
+    }50%{
+      transform: translateY(-100%);
+    }
+    50.01%{
+      transform: translateY(100%);
+    }
+  }
+  
+  .pie-de-pagina{
+   padding-top: 5px;
+   padding-bottom: 5px;
+   background:black;
+   color:white;
+   text-align:center;
+   width: 100%;
+  }
+  .pie-de-pagina p{
+    margin: 10px;
+  }
+
+  body{
+    margin:0;
+    padding:0;
+    background-attachment: fixed;
+    background-position:center;
+    background-size:cover;
+    background-color:rgba(0,0,0,.7);
+    background-image: url('bg.webp');
+    background-blend-mode:multiply;
+  }
+
+  @media (max-width:800px){
+    .contenedor{
+        flex-direction: column;
+        height: auto;
+    }
+    .contenedor div{
+        margin: 5px;
+    }
+  }

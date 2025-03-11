@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Binary Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="res/head-foot.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+
+    <div class="contenedor">
+    	<div class="titulo">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <b>Binary Shop</b>
+	   </div>
+       <div class="botones">
+      	<button onclick="login(event)">Iniciar Sesión</button>
+      	<button onclick="view(event)">Registrarse</button>
+       </div>
+     </div>
+
+    <div class="bienvenida">
+      <p> Olvídate de las largas filas y los horarios limitados.
+      En Binary Shop, te ofrecemos un catálogo infinito de productos, desde lo último en tecnología hasta artículos para el hogar, ¡todo al alcance de tu mano!.
+      Descubre la nueva era del comercio electrónico, donde la comodidad y la variedad se fusionan para brindarte una experiencia de compra inigualable
+      </p>
+    </div>
+
+    <div class="formulario">
+      <form onsubmit="login(event)">
+        <h2>Iniciar Sesión</h2>
+        <input type="text" placeholder="ingresa tu nickname" id="nick" required>
+        <input type="password" placeholder="ingresa tu contraseña" id="pass" required>
+        <select id="rol" required>
+          <option value="" selected disabled>Selecciona una opcion</option>
+          <option value="cliente">Cliente</option>
+          <option value="vendedor">Vendedor</option>
+          <option value="admin">Administrador</option>
+        </select>
+        <input type="submit" value="login">
+      </form>
+    </div>
+
+    <div class="formulario" id="registro-view">
+      <form onsubmit="registro(event)">
+        <h2>Registrarse</h2>
+        <input type="text" placeholder="ingresa tu nombre" id="input1" required>
+        <input type="text" placeholder="ingresa tu apellido" id="input2" required>
+        <input type="text" placeholder="ingresa tu direccion" id="input3" required>
+        <input type="text" placeholder="ingresa tu nick" id="input4" required>
+        <input type="password" placeholder="ingresa tu contraseña" id="input5" required>
+        <select id="rol" id="input6" required>
+          <option value="" disabled selected>Selecciona un rol</option>
+          <option value="cliente">Cliente</option>
+          <option value="vendedor">Vendedor</option>
+          <option value="admin">Administrador</option>
+        </select>
+        <br>
+        <h3>Datos Bancarios</h3>
+        <input type="text" placeholder="ingrese nro de la tarjeta" id="input7" required>
+        <input type="text" placeholder="ingrese cvv" id="input8" required>
+        <input type="text" placeholder= "ingrese fecha vencimiento" id="input9" required>
+        <input type="submit" value="registro">
+      </form>
+    </div>
+    <div class="pie-de-pagina"><p>Copyright © Binary Shop 2025</p></div>
+    <script src="script.js"></script>
+  </body>
+</html>

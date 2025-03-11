@@ -1,0 +1,184 @@
+/*CSS*/
+.formulario{
+    position:fixed;
+    top:150px;
+    left:auto;
+    background:rgb(255,255,255);
+    border: 1px solid black;
+    border-radius:10px;
+    padding:20px;
+    display:none;
+    text-align: center;
+  }
+  
+  .formulario h2{
+    text-transform: uppercase;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+  }
+
+  form{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+  }
+  
+  form input[type="text"]{
+    margin: 8px;
+    border: none;
+    border-radius: 6px;
+    background-color: rgba(0,0,0,.2);
+    padding: 7px;
+    transition: all .3s ease-in;
+  }
+
+  form input[type="text"]::placeholder{
+    color:rgb(30,30,30);
+  }
+
+  form input[type="text"]:focus{
+    outline: none;
+    transform: scale(1.05);
+  }
+
+  form button, form input[type="submit"]{
+    width: fit-content;
+    margin: 5px auto;
+    padding: 6px 25px;
+    font-size: medium;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background: black;
+  }
+
+  form button:hover, form input[type="submit"]:hover{
+    cursor: pointer;
+    background-color: white;
+    color:black;
+    box-shadow: 0px 0px 5px black;
+  }
+
+  form label{
+    text-align: left;
+    margin: 5px 15px;
+  }
+
+  form input[type="file"]{
+    margin: 8px;
+    margin-bottom: 20px;
+  }
+
+  .productos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+    padding:20px 20px;
+    backdrop-filter: blur(5px);
+    background:rgba(0,0,0,0.7);
+    width:calc(100% - 40px);
+  }
+  
+  .product p{
+    margin:10px;
+  }
+  
+  .p{
+    margin-top:0px;
+    padding-top:60px;
+    color:white;
+    text-align:left;
+    width:calc(100% - 40px);
+    margin-left:0px;
+    padding-left:40px;
+    padding-bottom:20px;
+    margin-bottom:0px;
+    backdrop-filter: blur(5px);
+    background:rgba(0,0,0,0.75);
+    border-bottom: 1px solid white;
+  }
+  
+  .product{
+    overflow:hidden;
+    border-radius:10px;
+    display:flex;
+    flex-direction:column;
+    color:white;
+    border: 1px solid black;
+    margin: 30px;
+    padding: 15px;
+    justify-content:center;
+    text-align:center;
+    box-shadow: 0px 0px 5px white;
+    backdrop-filter: blur(5px);
+    position:relative;
+    transition: all .3s ease-out;
+    background-color: rgba(255,255,255,.19);
+  }
+  
+  .product img{
+    position:absolute;
+    top:15px;
+    left:15px;
+    width:calc(100% - 30px);
+    z-index:-1;
+    filter: brightness(0.2);
+    transition: all .5s ease-out;
+    border-radius: 10px;
+  }
+  
+  .product:hover{
+    background:white;
+  }
+  
+  .product:hover img{
+    filter: brightness(1);
+    z-index:0;
+    transform:scale(1.06);
+  }
+  
+  .product h2{
+    font-size: 18px;
+  }
+  
+  body{
+    margin:0;
+    display:flex;
+    flex-direction:column;
+    padding:0;
+    justify-content:center;
+    align-items:center;
+  }
+
+  @media (max-width:800px){
+    .p{
+        margin-top: 43px;
+    }
+  }
+
+  .historial{
+    position: fixed;
+    top:150px;
+    left: auto;
+    padding: 20px 30px;
+    background: white;
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .historial button{
+    margin: 5px auto;
+    padding: 5px 25px;
+    border-radius: 10px;
+    border: none;
+    background-color: transparent;
+    box-shadow: 0px 0px 5px black;
+  }
+
+  .historial button:hover{
+    background-color: #191919;
+    color:white;
+    cursor: pointer;
+  }

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="head-foot.css">
+    <link rel="stylesheet" href="admin.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BS Admin</title>
+</head>
+<body>
+    <div class="contenedor">
+    	<div class="titulo">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <b>Binary Shop</b>
+	   </div>
+       <div class="botones">
+      	<button onclick="cerrarsesion(event)">Cerrar Sesión</button>
+       </div>
+     </div>
+
+    <div class="main" id="main">
+
+      <div id="opciones" class="opciones">
+        <button onclick="verproductos()">Ver Productos</button>
+        <button onclick="veru()">Ver Usuarios</button>
+          </div>
+
+      <div class="contenido" id="contenido">
+
+      <h2 id="h2productos">Productos</h2>
+      <div class="productos" id="productos"></div>
+
+      <h2 id="h2u">Usuarios</h2>
+      <div class="usuarios" id="usuarios"></div>
+
+        <div class="pie-de-pagina"><p>Copyright © Binary Shop 2025</p></div>
+       </div>
+    </div>
+
+    <div id="eliminarproductos" class="eliminarproductos">
+      <h2>Esta seguro de eliminar el producto?</h2>
+      <button onclick="confirmar('producto')">Confirmar</button>
+      <button onclick="cancelar('eliminarproductos')">Cancelar</button>
+      </div>
+
+    <div id="eliminarusuarios" class="eliminarusuarios">
+      <h2>Esta seguro de eliminar este usuario?</h2>
+      <button onclick="confirmar('usuario')">Confirmar</button>
+      <button onclick="cancelar('eliminarusuarios')">Cancelar</button>
+    </div>
+    <script src="productos.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
