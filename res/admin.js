@@ -55,7 +55,7 @@ function cerrarsesion(){
     usuarios.forEach(user => {
       const div = document.createElement('div');
       const img = document.createElement('img');
-      img.src = "https://w7.pngwing.com/pngs/1000/665/png-transparent-computer-icons-profile-s-free-angle-sphere-profile-cliparts-free.png";
+      img.src = "imagenes/user.png";
       div.appendChild(img);
       const info = document.createElement('p');
       info.textContent = user['Nombre']+" "+user['Apellido'];
