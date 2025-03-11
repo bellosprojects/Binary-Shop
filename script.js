@@ -14,7 +14,7 @@ function login(event){
     }
     else if(rol=="vendedor"){
       if(nick=="dancabello" && pass=="J5*asdRD.s"){
-        window.location.href = "res/introvendedor.html";
+        window.location.href = "res/vendedor.html";
       }
       else{
         alert("Datos incorrectos");
@@ -22,7 +22,7 @@ function login(event){
     }
     else if(rol=="admin"){
       if(nick=="root" && pass=="dochouse"){
-        window.location.href = "res/introadmin.html";
+        window.location.href = "res/admin.html";
       }
       else{
         alert("Datos incorrectos");
